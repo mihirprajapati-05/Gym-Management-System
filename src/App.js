@@ -6,6 +6,8 @@ import  Error from './components/Error';
 import  Menu from './components/Menu';
 import  Aboutus from './components/Aboutus';
 import  Contactus from './components/Contactus';
+import  Login from './components/Login';
+import  RegistrationUser from './components/RegistrationUser'
 
 
 import {
@@ -23,10 +25,12 @@ function App() {
       <Navbar/>
       <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/HOme" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
           <Route path="/Menu" element={<Menu/>} />
           <Route path="/Aboutus" element={<Aboutus />} />
           <Route path="/Contactus" element={<Contactus />} />
+           <Route exact path="/Login" element={<Login />} />
+          <Route path="/RegistrationUser" element={<RegistrationUser />}/>
           <Route element={<Error/>}></Route>
       </Routes>
       <Footer/>

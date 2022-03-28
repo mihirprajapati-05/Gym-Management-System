@@ -1,41 +1,40 @@
 import React from 'react'
-import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdbreact";
+import './css/login.css'
 
 const Login = () => {
   return (
-      <>
-    <MDBContainer>
-      <MDBRow>
-        <MDBCol md="6">
-          <form>
-            <p className="h4 text-center mb-4">Sign in</p>
-            <label htmlFor="defaultFormLoginEmailEx" className="grey-text">
-              Your email
-            </label>
-            <input
-              type="email"
-              id="defaultFormLoginEmailEx"
-              className="form-control"
-            />
-            <br />
-            <label htmlFor="defaultFormLoginPasswordEx" className="grey-text">
-              Your password
-            </label>
-            <input
-              type="password"
-              id="defaultFormLoginPasswordEx"
-              className="form-control"
-            />
-            <div className="text-center mt-4">
-              <MDBBtn color="indigo" type="submit">
-                Login
-              </MDBBtn>
-            </div>
-          </form>
-        </MDBCol>
-      </MDBRow>
-    </MDBContainer>
-    </>
+    <div classNameName='mt-5'>
+
+    <div className="sidenav font-weight-bold">
+     <div className="login-main-text">
+        <h2><br/> Login Page</h2>
+        <p>Login or register from here to access.</p>
+     </div>
+  </div>
+  <div className="main">
+     <div className="col-md-6 col-sm-12">
+        <div className="login-form text-light font-weight-bold">
+           <form>
+              <div className="form-group">
+                 <label>User Name</label>
+                 <input type="text" className="form-control" placeholder="User Name" />
+              </div>
+              <div className="form-group">
+                 <label>Password</label>
+                 <input type="password" className="form-control" placeholder="Password" />
+              </div>
+              <button type="submit" className="btn btn-black">Login</button>
+              <button type="submit" className="btn btn-secondary" onClick="./RegistrationUser">Register</button>
+              <button type="reset" className="btn btn-black">Reset</button><br/><br/>
+              <div class="text text-center">
+                <a href="" className='textAlign:center'>Forgotten Password?</a>
+              </div>
+           </form>
+        </div>
+     </div>
+  </div>
+
+</div>
   )
 }
 

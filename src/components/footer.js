@@ -4,7 +4,7 @@ import React from 'react'
 const footer = () => {
   return (
     <div className='mt-5'>
-        <footer id="footer" class="footer-1 bg-dark text-white">
+        <footer id="footer" class="footer-1 mt-auto bg-dark text-white ">
           <div class="main-footer widgets-dark typo-dark ">
           <div class="container mt-4 pt-4">
           <div class="row">
@@ -57,7 +57,7 @@ const footer = () => {
           <div class="container">
           <div class="row">
           <div class="col-md-12 text-center">
-          <p>Copyright Company Name © 2021. All rights reserved.</p>
+          <p>Copyright M-Square Gym © 2021. All rights reserved.</p>
           </div>
           </div>
           </div>

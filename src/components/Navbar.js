@@ -25,11 +25,14 @@ const navbar = () => {
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/Contactus">Contact Us</Link>
               </li>
-
-            </ul>
-            <li className="d-flex nav-item mb-2 mb-lg-0 text-white">
-                <Link className="nav-link" aria-current="page" to="/Login">Login</Link>
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/Login">Login</Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/RegistrationUser">Register</Link>
+              </li>
+            </ul>
+
           </div>
         </div>
     </nav>

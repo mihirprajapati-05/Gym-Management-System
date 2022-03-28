@@ -1,17 +1,29 @@
-import React from 'react'
+import React from 'react';
+import {Card} from 'react-bootstrap'
+
+import img1 from '../components/images/gym_dark8.jpg'
 
 const Aboutus = () => {
   return (
-    <div>
-        <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="..."/>
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-        </div>
-    </div>
+    <>
+      <div>
+          <h1 style={{ color:'#FFFFFF' , textAlign:'center' ,fontWeight:'bold' ,marginTop:'80px' }}>About US</h1>
+          <hr style={{ color:'#FFFFFF' ,marginLeft:'150px ' ,marginRight:'150px'}}/>
+          <Card style={{ width: '60rem' ,height: '36rem' ,alignItems:'center' ,marginLeft:'260px'}}>
+            <Card.Img variant="top" src={img1} style={{ marginTop:'20px',width: '60rem' ,height: '25rem'}}/>
+            <Card.Body>
+              <Card.Title style={{ textAlign: 'center'}}>M-SQUARE</Card.Title>
+              <Card.Text style={{ marginBottom: '80px'}}>
+                M-Square was conceptualized keeping in mind the rationale behind multi specialty centre concept. At Ozone we integrate all the possible relaxation, exercises and group exercise techniques, i,e.,“gym, spa, yoga, aerobics” centers.are all under a single roof.
+                Ozone Clubs are the luxury health clubs and salons launched to satisfy the niche segment by revitalizing their senses and soothe the jitteriness of city life.
+                Ozone Spa Pvt. Ltd., incorporated on November 1, 2002 is the country's first largest chain of premier boutique health, fitness and spa.
+                
+              </Card.Text>
+            </Card.Body>
+          </Card>
+      </div>
+
+    </>
   )
 }
 
