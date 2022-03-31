@@ -3,7 +3,7 @@ import { Carousel } from 'react-bootstrap';
 
 import img1 from '../components/images/banner.png'
 import img2 from '../components/images/gym_dark4.jpg'
-import img3 from '../components/images/barbel.jpg'
+import img3 from '../components/images/r2.jpg'
 
 const Slider = () => {
     return (

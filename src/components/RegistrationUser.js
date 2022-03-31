@@ -1,72 +1,122 @@
 import React from 'react'
-import './css/registeruser.css'
+import './css/registrationuser.css'
+import img1 from '../components/images/gym_dark5.jfif'
+import { Link } from 'react-router-dom'
 
-const RegistrationUser = () => {
+function RegistrationUser() {
   return (
-    <div classNameName='mt-5'>
+    <div className='mt-5'>
+        <section className="h-100 bg-dark">
+        <div className="container py-5 h-100">
+            <div className="row d-flex justify-content-center align-items-center h-100">
+            <div className="col">
+                <div className="card card-registration my-4">
+                <div className="row g-0">
+                    <div className="col-xl-6 d-none d-xl-block">
+                    <img src={img1} alt="register" className="img-fluid" width={900} height={3000}
+                        style={{borderTopLeftRadius: '.25rem', borderBottomLeftRadius: '.25rem' , marginTop:'30px',marginLeft:'20px'}}
+                    />
+                    </div>
+                    <div className="col-xl-6">
+                    <div className="card-body p-md-5 text-black">
+                        <h3 className="mb-5 text-uppercase text-center">REGISTER HERE..</h3>
+                        {/* name  */}
+                        <div className="form-outline mb-4">
+                            <input type="text" name="membername"  placeholder="Enter Name.." id="form3Example97" className="form-control form-control-lg" />
+                            <label className="form-label">Name</label>
+                        </div>
+                        {/* Email  */}                        
+                        <div className="form-outline mb-4">
+                            <input type="text" name="memberemail"  placeholder="Enter Email-ID.." id="form3Example97" className="form-control form-control-lg" />
+                            <label className="form-label">Email ID</label>
+                        </div>
+                        {/* DOB and Contactno  */}
+                        <div className="row">
+                            <div className="col-md-6 mb-4">
+                                <div className="form-outline">
+                                    <input type="date" name="memberdob" id="form3Example1m1" className="form-control form-control-lg" />
+                                    <label className="form-label" for="form3Example1m1">DOB</label>
+                                </div>
+                            </div>
+                            <div className="col-md-6 mb-4">
+                                <div className="form-outline">
+                                    <input type="tel" name="membercontactno"  placeholder="Enter Contact Number.." id="form3Example1n1" className="form-control form-control-lg" />
+                                    <label className="form-label" for="form3Example1n1" >Contact Number</label>
+                                </div>
+                            </div>
+                        </div>
+                        {/* Address */}
+                        <div className="form-outline mb-4">
+                            <input type="text" name="memberaddress"  placeholder="Enter Address.." className="form-control form-control-lg" />
+                            <label className="form-label" for="form3Example8">Address</label>
+                        </div>
+                        {/* Gender  */}
+                        <div className="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                            <h6 className="mb-0 me-4">Gender: </h6>
+                            <div className="form-check form-check-inline mb-0 me-4">
+                                <input
+                                className="form-check-input"
+                                type="radio"
+                                name="inlineRadioOptions"
+                                id="femaleGender"
+                                value="option1"
+                                />
+                                <label className="form-check-label" for="femaleGender">Female</label>
+                            </div>
+                            <div className="form-check form-check-inline mb-0 me-4">
+                                <input
+                                className="form-check-input"
+                                type="radio"
+                                name="inlineRadioOptions"
+                                id="maleGender"
+                                value="option2"
+                                />
+                                <label className="form-check-label" for="maleGender">Male</label>
+                            </div>
+                        </div>
 
-    <div className="sideheader font-weight-bold">
-     <div className="register-main-text">
-        <h2> Register Here..</h2>
-        <p>register or register from here to access.</p>
-     </div>
-  </div>
-  <div className="main">
-     <div className="col-md-6 col-sm-12">
-        <div className="register-form text-light font-weight-bold">
-           <form>
-              <div className="form-group">
-                 <label>Enter Name</label>
-                 <input type="text" name="username" className="form-control" placeholder="enter name.." />
-              </div>
-              <div className="form-group">
-                 <label>Enter Email</label>
-                 <input type="email" name="useremail" className="form-control" placeholder="enter email.." />
-              </div>
-              <div className="form-group">
-                 <label>Enter Contact Number</label>
-                 <input type="tel" name="usercontactno" className="form-control" placeholder="enter contact number.." />
-              </div>
-              <div className="form-group">
-                 <label>Enter Address</label>
-                 <textarea type="text" id="message" name="useraddress" rows="2" class="form-control md-textarea" placeholder="enter address.."></textarea>
-              </div>
-              <div class="form-group">
-                  <label>Select Gender</label>                  
-                  <select type="gender" placeholder="Select Gender" class="form-control">
-                    <option value="female">Female</option>
-                    <option value="male">Male</option>
-                  </select>
-              </div>
-              <div className="form-group">
-                 <label>Select Date Of Birth</label>
-                 <input type="date" name="userdate" placeholder="Select Date-Of-Birth" class="form-control"/>
-              </div>
-              
-              <div className="form-group">
-                 <label>Select Height</label>
-                 <input type="number" name="userheight" className="form-control" placeholder="Select Height" />
-                 <label>Select Weight</label>
-                 <input type="number" name="userweight" min={0} max={200} className="form-control" placeholder="Select Weight" />
-              </div>
-              
-              <div className="form-group">
-                 <label>Password</label>
-                 <input type="password" name="userpassword" className="form-control" placeholder="Password" />
-              </div>
-              <div class="text text-center">
-              <button type="submit" className="btn btn-secondary">Register</button>
-              <button type="reset" className="btn btn-black">Reset</button><br/><br/>
-              </div>
-              <div class="text text-center">
-                <a href="/Login" className='textAlign:center'>Already Register , register Here...</a>
-              </div>
-           </form>
+                        {/* Height and Weight  */}
+                        <div className="row">
+                            <div className="col-md-6 mb-4">
+                                <select className="select">
+                                    <option value="1">Select Height</option>
+                                    <option value="2">Option 1</option>
+                                    <option value="3">Option 2</option>
+                                    <option value="4">Option 3</option>
+                                </select>
+                            </div>
+                            <div className="col-md-6 mb-4">
+                                <select className="select">
+                                    <option value="1">Select Weight</option>
+                                    <option value="2">Option 1</option>
+                                    <option value="3">Option 2</option>
+                                    <option value="4">Option 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        {/* Password  */}
+                        <div className="form-outline mb-4">
+                            <input type="password" name="memberpassword"  placeholder="Enter Password.." className="form-control form-control-lg" />
+                            <label className="form-label" for="form3Example99">Password</label>
+                        </div>
+
+                        {/* Buttons  */}
+                        <div className="d-flex justify-content-end pt-3">
+                            <button type="button" className="btn btn-light btn-lg">Reset all</button>
+                            <button type="button" className="btn btn-warning btn-lg ms-2">Submit form</button>
+                        </div>
+                        <div className="d-flex justify-content-end">
+                            <Link className="" to="/Login">Already Register? Login Here...</Link>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
         </div>
-     </div>
-  </div>
-
-</div>
+        </section>
+    </div>
   )
 }
 

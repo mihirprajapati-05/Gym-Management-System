@@ -1,41 +1,39 @@
 import React from 'react'
 import './css/login.css'
+import { Link } from 'react-router-dom'
+import img1 from '../components/images/gym_room.jfif'
 
-const Login = () => {
+function Login() {
   return (
-    <div classNameName='mt-5'>
+   <div className='form-v6'>
+   <div class="page-content">
+       <div class="form-v6-content">
+           <div class="form-left">
+               <img src={img1} className='ml-3 mt-3' style={{height:'400px',width:'550px'}} alt="form"/>
+           </div>
+           <form class="form-detail" action="#" method="post">
+               <h2>LOGIN</h2>
+               <div class="form-row">
+                   <input type="text" name="useremail" id="your-email" class="input-text" placeholder="Enter Username Here..." required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"/>
+               </div>
+               <div class="form-row">
+                   <input type="password" name="password" id="password" class="input-text" placeholder="Enter Password Here..." required/>
+               </div>
+               <div class="form-row-last">
+                   <input type="submit" name="register" class="register" value="Login"/>
+               </div>
+               <div class="form-row-last">
+                    <Link className="imput-text" to="/ForgotPassword">Forgot Password</Link>
+                    <Link className="imput-text" to="/RegistrationUser">Register First!</Link>
+               </div>
 
-    <div className="sidenav font-weight-bold">
-     <div className="login-main-text">
-        <h2><br/> Login Page</h2>
-        <p>Login or register from here to access.</p>
-     </div>
-  </div>
-  <div className="main">
-     <div className="col-md-6 col-sm-12">
-        <div className="login-form text-light font-weight-bold">
-           <form>
-              <div className="form-group">
-                 <label>User Name</label>
-                 <input type="text" className="form-control" placeholder="User Name" />
-              </div>
-              <div className="form-group">
-                 <label>Password</label>
-                 <input type="password" className="form-control" placeholder="Password" />
-              </div>
-              <button type="submit" className="btn btn-black">Login</button>
-              <button type="submit" className="btn btn-secondary" onClick="./RegistrationUser">Register</button>
-              <button type="reset" className="btn btn-black">Reset</button><br/><br/>
-              <div class="text text-center">
-                <a href="" className='textAlign:center'>Forgotten Password?</a>
-              </div>
            </form>
-        </div>
-     </div>
-  </div>
+       </div>
+   </div>
 
-</div>
-  )
+ </div>
+
+   )
 }
 
-export default Login;
+export default Login
