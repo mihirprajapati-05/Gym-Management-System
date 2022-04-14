@@ -5,12 +5,13 @@ import img1 from '../components/images/gym_dark8.jpg'
 
 const Aboutus = () => {
   return (
-    <>
-      <div>
-          <h1 style={{ color:'#FFFFFF' , textAlign:'center' ,fontWeight:'bold' ,marginTop:'80px' }}>About US</h1>
+    
+      <div className='bg-black'>
+          <h1 style={{ color:'#FFFFFF' , textAlign:'center' ,fontWeight:'bold' ,marginTop:'60px' }}>About US</h1>
           <hr style={{ color:'#FFFFFF' ,marginLeft:'150px ' ,marginRight:'150px'}}/>
           <Card style={{ width: '60rem' ,height: '36rem' ,alignItems:'center' ,marginLeft:'260px'}}>
-            <Card.Img variant="top" src={img1} style={{ marginTop:'20px',width: '60rem' ,height: '25rem'}}/>
+            
+            <Card.Img variant="top" src={img1} style={{width: '60rem' ,height: '25rem'}}/>
             <Card.Body>
               <Card.Title style={{ textAlign: 'center'}}>M-SQUARE</Card.Title>
               <Card.Text style={{ marginBottom: '80px'}}>
@@ -23,7 +24,6 @@ const Aboutus = () => {
           </Card>
       </div>
 
-    </>
   )
 }
 

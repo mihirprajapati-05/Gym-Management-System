@@ -13,10 +13,10 @@ const ChangePassword = () => {
             <form class="form-detail" action="#" method="post">
                 <h2 className=''>CHANGE PASSWORD</h2>
                 <div class="form-row">
-                    <input type="text" name="useremail" id="your-email" class="input-text" placeholder="Enter Password Here..." required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"/>
+                    <input type="password" name="password1" id="password" class="input-text" placeholder="Enter Password Here..." required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"/>
                 </div>
                 <div class="form-row">
-                    <input type="password" name="password" id="password" class="input-text" placeholder="Enter Password Again..." required/>
+                    <input type="password" name="password2" id="password" class="input-text" placeholder="Enter Password Again..." required/>
                 </div>
                 <div class="form-row-last">
                     <input type="submit" name="register" class="register" value="Change"/>

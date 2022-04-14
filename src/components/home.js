@@ -1,11 +1,17 @@
 import React from 'react'
 import Slider from './Slider';
+import Feature from './Feature';
+
+
+// import FeatureSlider from './FeatureSlider'
+
 
 function home() {
   return (
-    <div>
+    <div className='bg-black'>
         <Slider/>
-        <h1>This is Home Page...</h1>
+        <Feature/>
+        {/* <FeatureSlider/> */}
     </div>
   )
 }

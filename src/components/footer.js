@@ -1,50 +1,61 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const footer = () => {
   return (
-    <div className='mt-5'>
-        <footer id="footer" className="footer-1 mt-auto bg-dark text-white ">
+    <div className='bg-black'>
+        <footer id="footer" className="footer-1 mt-auto text-white ">
           <div className="main-footer widgets-dark typo-dark ">
           <div className="container mt-4 pt-4">
           <div className="row">
             
           <div className="col-xs-12 col-sm-6 col-md-3">
           <div className="widget subscribe no-box">
-          <h5 className="widget-title text-uppercase">COMPANY NAME<span></span></h5>
+          <h5 className="widget-title text-uppercase">M-Square Fitness Hub<span></span></h5>
           <p>About the company, little discription will goes here.. </p>
           </div>
           </div>
 
           <div className="col-xs-12 col-sm-6 col-md-3">
-          <div className="widget no-box">
-          <h5 className="widget-title text-uppercase">Quick Links<span></span></h5>
-          <ul className="thumbnail-widget">
-          <li>
-          <div className="thumb-content"><a href="#.">Get Started</a></div> 
-          </li>
-          <li>
-          <div className="thumb-content"><a href="#.">Top Leaders</a></div> 
-          </li>
-          <li>
-          <div className="thumb-content"><a href="#.">About</a></div> 
-          </li>
-          </ul>
-          </div>
-          </div>
-
-          <div className="col-xs-12 col-sm-6 col-md-3">
-          <div className="widget no-box">
-          <h5 className="widget-title" text-uppercase>Get Started<span></span></h5>
-          <p>Get access to your full Training and Marketing Suite.</p>
-          </div>
+            <div className="widget no-box text-uppercase">
+              <h5 className="widget-title text-uppercase">Quick Links<span></span></h5>
+              <ul className="thumbnail-widget">
+                <li>
+                  <div className="thumb-content"><Link to="/Home">Home</Link></div> 
+                 </li>
+                <li>
+                  <div className="thumb-content"><Link to="/Aboutus">About Us </Link></div> 
+                </li>
+                <li>
+                  <div className="thumb-content"><Link to="/Contactus">Contact Us</Link></div> 
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div className="col-xs-12 col-sm-6 col-md-3">
+            <div className="widget no-box text-uppercase">
+              <h5 className="widget-title text-uppercase">Quick Links<span></span></h5>
+                <ul className="thumbnail-widget">
+                <li>
+                <div className="thumb-content"><Link to="/Login">Login</Link></div> 
+                </li>
+                <li>
+                <div className="thumb-content"><Link to="/RegistrationUser">Register </Link></div> 
+                </li>
+                <li>
+                <div className="thumb-content"><Link to="/Contactus"></Link></div> 
+                </li>
+                </ul>          
+            </div>
+          </div>
 
-          <div className="widget no-box">
+          <div className="col-xs-12 col-sm-6 col-md-3">
+
+          <div className="widget no-box text-uppercase">
           <h5 className="widget-title text-uppercase">Contact Us<span></span></h5>
 
-          <p><a href="mailto:info@domain.com" title="glorythemes">info@domain.com</a></p>
+          <p><a href="mailto:info@domain.com" title="glorythemes">info@M-Square.com</a></p>
           </div>
           </div>
     
@@ -55,8 +66,8 @@ const footer = () => {
           <div className="footer-copyright">
           <div className="container">
           <div className="row">
-          <div className="col-md-12 text-center">
-          <p>Copyright M-Square Gym © 2021. All rights reserved.</p>
+          <div className="col-md-12 text-center" style={{fontSize:'15px'}}>
+          <p>Copyright M-Square Gym © 2022. All rights reserved.</p>
           </div>
           </div>
           </div>

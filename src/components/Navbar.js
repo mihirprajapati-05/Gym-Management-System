@@ -5,36 +5,44 @@ import logo from '../components/images/logo.png';
 
 export default function Navbar(props) {
   return (
-    <div>
+    <div className='mb-5'>
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-black">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/home"><img src={logo} width={100} height={40} alt='HomePage'></img></Link>
+          <Link className="navbar-brand ml-5" to="/home"><img src={logo} width={100} height={40} alt='HomePage'></img></Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/home">{props.Home}</Link>
               </li>            
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/Menu">{props.Feature}</Link>
+                <Link className="nav-link active" aria-current="page" to="/Contactus">{props.ContactUs}</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/Aboutus">{props.AboutUs}</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/Contactus">{props.ContactUs}</Link>
-              </li>
-              <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/Login">{props.Login}</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/RegistrationUser">{props.Registration}</Link>
+                <Link className="nav-link active" aria-current="page" to="/RegistrationUser">{props.RegistrationUser}</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/ChangePassword">Change Password</Link>
+                <Link className="nav-link active" aria-current="page" to="/RegistrationTrainer">{props.RegistrationTrainer}</Link>
               </li>
+              {/* Views */}
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/VMemberDetails">VMembers</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/VTrainerDetails">VTrainers</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/MemberProfile">MemberProfile</Link>
+              </li>
+
             </ul>
 
           </div>
@@ -46,18 +54,19 @@ export default function Navbar(props) {
 
 Navbar.propTypes = {
   Home: PropTypes.string.isRequired,
-  Feature:PropTypes.string.isRequired,
   AboutUs:PropTypes.string.isRequired,
   ContactUs:PropTypes.string.isRequired,
   Login:PropTypes.string.isRequired,
-  Registration:PropTypes.string.isRequired,
+  RegistrationUser:PropTypes.string.isRequired,
+  RegistrationTrainer:PropTypes.string.isRequired
 }
 
 Navbar.defaultProps = {
     Home:'Home',
-    Feature:'Feature',
     AboutUs:'About Us',
     ContactUs:'Contact Us',
     Login:'Login',
-    Registration:'Registration'
+    RegistrationUser:'Registration',
+    RegistrationTrainer:'RegistrationTrainer'
+
 }
