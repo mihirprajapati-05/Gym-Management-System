@@ -1,25 +1,46 @@
 import React,{useState,useEffect} from 'react'
 import './css/login.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import img1 from '../components/images/login.jpg'
-
+import axios from 'axios'
 function Login() {
 
     const initialvalue={useremail:"",userpassword:""};
     const [formValues,setFormValues]=useState(initialvalue);
     const [formErrors,setFormErrors]=useState({});
     const [isSubmit,setisSubmit]=useState(false);
+    const  result= axios.post('http://localhost:5000/auth/member_login',{ initialvalue });
+    const tresult = axios.post('http://localhost:5000/auth/register',{ initialvalue});
+
     // const [hselects,sethselects]=useState();
     
     const handleChange=(e)=>{
         const {name,value}=e.target;
         setFormValues({...formValues,[name]:value});
     };
-
+    const navigate = useNavigate()
     const handleSubmit = (e)=>{
         e.preventDefault();
         setFormErrors(validate(formValues));
         setisSubmit(true);
+        
+        if(initialvalue.useremail === "admin@gmail.com" && initialvalue.userpassword ==="admin123")
+        {
+            navigate('/admindashboard')
+        }
+        else if(result) 
+        {
+         // result= axios.post('http://localhost:5000/auth/member_login',{ initialvalue });
+
+        navigate('/memberdashboard')
+        }
+        else
+        {
+           
+            console.log(tresult)
+        navigate('/trainerdashboard')
+        }
+
     };
 
     useEffect(()=>{
@@ -42,7 +63,7 @@ function Login() {
         // Password
         if(!values.userpassword){
             errors.userpassword="Password is required...!";
-        }else if(values.userpassword.length < 8){
+        }else if(values.userpassword.length < 5){
             errors.userpassword="Minimum 8 characters password must be required..!";
         }else if(values.userpassword.length > 15){
             errors.userpassword="Password cannot exceed more than 15 characters..!";

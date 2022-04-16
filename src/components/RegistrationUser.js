@@ -99,7 +99,7 @@ function RegistrationUser() {
                     </div>
                     <div className="col-xl-6">
                         {/* Form Tag */}
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} action="Login">
                     <div className="card-body p-md-5 text-black">
                         <h3 className="mb-5 text-uppercase text-center">REGISTER HERE..</h3>
                         {/* name  */}
@@ -195,7 +195,7 @@ function RegistrationUser() {
                         {/* Password  */}
                         <div className="form-outline mb-4">
                             <input type="password" name="memberpassword" value={formValues.memberpassword} onChange={handleChange} placeholder="Enter Password.." className="form-control form-control-lg" />
-                            {/* <label className="form-label" for="form3Example99">Password</label><label className="form-label ml-5" style={{color:'red'}}>{formErrors.memberpassword}</label> */}
+                            <label className="form-label" for="form3Example99">Password</label><label className="form-label ml-5" style={{color:'red'}}>{formErrors.memberpassword}</label>
                         </div>
 
                         {Object.keys(formErrors).length === 0 && isSubmit ? (<div className="ui message success" style={{fontSize:'20px',color:'blue'}}>Register Successfully..</div> 
