@@ -125,8 +125,8 @@ function UpdateMember() {
                                 type="radio"
                                 name="membergender"
                                 id="femaleGender"
-                                value={formValues.membergender}
-                                onChange={handleChange}
+                                // value={formValues.membergender}
+                                // onChange={handleChange}
                                 />
                                 <label className="form-check-label" for="femaleGender">Female</label>
                             </div>
@@ -136,12 +136,12 @@ function UpdateMember() {
                                 type="radio"
                                 name="membergender"
                                 id="maleGender"
-                                value={formValues.membergender}
-                                onChange={handleChange}
+                                // value={formValues.membergender}
+                                // onChange={handleChange}
                                 />
                                 <label className="form-check-label" for="maleGender">Male</label>
                             </div>
-                            <label className="form-label ml-5" style={{color:'red'}}>{formErrors.membergender}</label>
+                            {/* <label className="form-label ml-5" style={{color:'red'}}>{formErrors.membergender}</label> */}
                         </div>
 
                         {/* Height and Weight  */}

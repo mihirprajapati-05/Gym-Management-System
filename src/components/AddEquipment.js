@@ -16,7 +16,7 @@ function AddEquipment() {
                 <div className="row g-0">
                     <div className="col-xl-6 d-none d-xl-block">
                     <img src={img1} alt="register" className="img-fluid" 
-                        style={{borderTopLeftRadius: '.25rem', borderBottomLeftRadius: '.25rem' ,width: "900px",height:"100%",objectFit:"cover"}}
+                        style={{borderTopLeftRadius: '.25rem', borderBottomLeftRadius: '.25rem' ,width: "800px",height:"80%",objectFit:"cover"}}
                     />
                     </div>
                     <div className="col-xl-6">
@@ -39,7 +39,7 @@ function AddEquipment() {
                         </div>
 
                         {/* Category  */}
-                        <div className="row">
+                        {/* <div className="row">
                             <div className="col-md-6 mb-4">
                                 <select className="select">
                                     <option value="1">Select Category</option>
@@ -48,7 +48,7 @@ function AddEquipment() {
                                     <option value="4">Membership 3</option>
                                 </select>
                             </div>
-                        </div>
+                        </div> */}
                         {/* Buttons  */}
                         <div className="d-flex justify-content-end pt-3">
                             <button type="button" className="btn btn-warning btn-lg ms-2">Submit form</button>

@@ -5,6 +5,16 @@ import { Link } from 'react-router-dom';
 
 function RegistrationUser() {
 
+        // disable future dates....
+        const disableDates=()=>{
+
+            const today=new Date();
+            const dd=String(today.getDate()+1).padStart(2,"0");
+            const mm=String(today.getMonth()+1).padStart(2,"0");
+            const yyyy=today.getFullYear();
+            return  yyyy+"-"+mm+"-"+dd;
+        }
+
     const initialvalue={membername:"",memberemail:"",memberdob:"",membercontactno:"",memberaddress:"",membergender:"",memberpassword:""};
     const [formValues,setFormValues]=useState(initialvalue);
     const [formErrors,setFormErrors]=useState({});
@@ -59,9 +69,9 @@ function RegistrationUser() {
             errors.memberdob="Select Your Birth Date..!";
         }
         // Gender
-        if(!values.membergender){
-            errors.membergender="Select Gender..!";
-        }   
+        // if(!values.membergender){
+        //     errors.membergender="Select Gender..!";
+        // }   
         // Password
         if(!values.memberpassword){
             errors.memberpassword="Password is required...!";
@@ -108,7 +118,7 @@ function RegistrationUser() {
                         <div className="row">
                             <div className="col-md-6 mb-4">
                                 <div className="form-outline">
-                                    <input type="date" name="memberdob" value={formValues.memberdob} onChange={handleChange} id="form3Example1m1" className="form-control form-control-lg" />
+                                    <input type="date" name="memberdob" max={disableDates()} value={formValues.memberdob} onChange={handleChange} id="form3Example1m1" className="form-control form-control-lg" />
                                     <label className="form-label" for="form3Example1m1">DOB</label><label className="form-label" style={{color:'red'}}>{formErrors.memberdob}</label>
                                 </div>
                             </div>
@@ -133,8 +143,8 @@ function RegistrationUser() {
                                 type="radio"
                                 name="membergender"
                                 id="femaleGender"
-                                value={formValues.membergender}
-                                onChange={handleChange}
+                                // value={formValues.membergender}
+                                // onChange={handleChange}
                                 />
                                 <label className="form-check-label" for="femaleGender">Female</label>
                             </div>
@@ -144,12 +154,12 @@ function RegistrationUser() {
                                 type="radio"
                                 name="membergender"
                                 id="maleGender"
-                                value={formValues.membergender}
-                                onChange={handleChange}
+                                // value={formValues.membergender}
+                                // onChange={handleChange}
                                 />
                                 <label className="form-check-label" for="maleGender">Male</label>
                             </div>
-                            <label className="form-label ml-5" style={{color:'red'}}>{formErrors.membergender}</label>
+                            {/* <label className="form-label ml-5" style={{color:'red'}}>{formErrors.membergender}</label> */}
                         </div>
 
                         {/* Height and Weight  */}
@@ -188,7 +198,7 @@ function RegistrationUser() {
                             {/* <label className="form-label" for="form3Example99">Password</label><label className="form-label ml-5" style={{color:'red'}}>{formErrors.memberpassword}</label> */}
                         </div>
 
-                        {Object.keys(formErrors).length === 0 && isSubmit ? (<div className="ui message success">Register Successfully..</div> 
+                        {Object.keys(formErrors).length === 0 && isSubmit ? (<div className="ui message success" style={{fontSize:'20px',color:'blue'}}>Register Successfully..</div> 
                         ) : (
                             <div className="ui message fail" style={{textAlign:'center',fontFamily:'-moz-initial',fontSize:'20px',color:'blue'}}>Fill out Form</div> 
                         )}

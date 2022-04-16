@@ -5,7 +5,7 @@ import logo from '../components/images/logo.png';
 function TrainerDashboard() {
   return (
       <>
-    <div className='mb-5' style={{paddingBottom:'60px'}}>
+    <div className='mb-5' style={{paddingBottom:'40px'}}>
         <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-black">
         <div className="container-fluid">
             <Link className="navbar-brand ml-5" to="/"><img src={logo} width={100} height={40} alt='HomePage'></img></Link>
@@ -18,14 +18,14 @@ function TrainerDashboard() {
                 <Link className="nav-link active" aria-current="page" to="/trainerdashboard/tprofile">Profile</Link>
                 </li>            
                 <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/trainerdashboard/">Timetable</Link>
+                <Link className="nav-link active" aria-current="page" to="/trainerdashboard/tschedule">Schedule</Link>
                 </li>
                 <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/trainerdashboard/vm">Trainees</Link>
+                <Link className="nav-link active" aria-current="page" to="/trainerdashboard/tmember">Trainees</Link>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/trainerdashboard/membership">Membership</Link>
-                </li>
+                </li> */}
                 <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="">Logout</Link>
               </li>

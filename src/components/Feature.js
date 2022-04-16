@@ -19,7 +19,7 @@ function Feature() {
               <img class="card-img-top" src={fimg1} alt="Card1"/>
               <div class="card-body">
                 <h5 class="card-title">Weight Loss</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                {/* <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> */}
               </div>
               <div class="card-footer">
                 <small class="text-muted">M-Square Gym</small>
@@ -29,7 +29,7 @@ function Feature() {
               <img class="card-img-top" src={fimg2} alt="Card2"/>
               <div class="card-body">
                 <h5 class="card-title">Spinnig Studio</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                {/* <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p> */}
               </div>
               <div class="card-footer">
                 <small class="text-muted">M-Square Gym</small>
@@ -39,7 +39,7 @@ function Feature() {
               <img class="card-img-top" src={fimg3} alt="Card3"/>
               <div class="card-body">
                 <h5 class="card-title">Personal Training</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                {/* <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p> */}
               </div>
               <div class="card-footer">
                 <small class="text-muted">M-Square Gym</small>

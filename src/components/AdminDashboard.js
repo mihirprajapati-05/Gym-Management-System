@@ -24,6 +24,9 @@ function AdminDashboard() {
                 <Link className="nav-link active" aria-current="page" to="/admindashboard/vtd">View Trainers</Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/admindashboard/ved">View Equipments</Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/admindashboard/adeq">Add Equipments</Link>
               </li>
               <li className="nav-item">

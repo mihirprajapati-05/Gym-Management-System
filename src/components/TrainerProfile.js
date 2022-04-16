@@ -1,160 +1,66 @@
 import React from 'react'
 import TrainerDashboard from './TrainerDashboard'
-import img1 from '../components/images/login.jpg'
+import './css/trainerprofile.css'
+import img1 from '../components/images/VidhyutProfile.jpg'
 
 function TrainerProfile() {
   return (
     <>
     <TrainerDashboard/>
-    <div>
-    <section style={{backgroundColor:'#00000'}}>
-      <div class="container py-2" style={{border:'10px solid grey'}}>
-        <div class="row">
-          <div class="col" style={{textAlign:'center'}}>
-            <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
-                <h4>TRINER PROFILE</h4>
-            </nav>
-
-          </div>
-        </div>
-
-        <div class="row bg-blue">
-          <div class="col-lg-4">
-            <div class="card mb-4">
-              <div class="card-body text-center">
-                <img src={{img1}} alt="avatar" style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                <h5 class="my-3">Vidhyut Jamwal</h5>
-                {/* <p class="text-muted mb-1">Full Stack Developer</p>
-                <p class="text-muted mb-4">Bay Area, San Francisco, CA</p> */}
-                <div class="d-flex justify-content-center mb-2">
-                  <button type="button" class="btn btn-primary">EDIT</button>
+    <div className='mt-5'>
+        <div className="container mt-5 mb-5">   
+            <h2 className='h2 h2-center' style={{color:'white',fontSize:'60px'}}>PROFILE</h2>
+            <div className="row no-gutters" style={{border:'10px solid grey'}}>
+                <div className="col-md-4 col-lg-4">
+                    <img src={img1} style={{width:'100%',objectFit:"cover"}}/>
                 </div>
-              </div>
+                <div className="col-md-8 col-lg-8">
+                    <div className="d-flex flex-column">
+                        <div className="d-flex flex-row justify-content-between align-items-center p-5 bg-dark text-white">
+                            {/* User Name */}
+                            <h3 className="display-5">Vidhyut Jamwal</h3>
+                        </div>
+                        <div className="p-3 bg-black text-white">
+                            <h6>PERSONAL DETAILS</h6>
+                        </div>
+                        <div className="w-32 d-flex flex-row text-white">
+                            <div className="p-4 text-center skill-block" style={{backgroundColor:'#2069e0'}}>
+                                <h5>Email</h5>
+                                <h6>Vidhyut123kjjkjk@gmail.com</h6>
+                            </div>
+                            <div className="p-3 text-center skill-block" style={{backgroundColor:'#927c6c'}}>
+                                <h5>Contact No</h5>
+                                <h6>9852147852</h6>
+                            </div>
+                        </div>
+                        <div className="d-flex flex-row text-white">
+                        <div className="p-3 text-center skill-block" style={{backgroundColor:'#082086'}}>
+                                <h4>Gender</h4>
+                                <h6>Male</h6>
+                            </div>
+                            <div className="p-3 text-center skill-block" style={{backgroundColor:'#018786'}}>
+                                <h4>DOB</h4>
+                                <h6>01/05/2000</h6>
+                            </div>
+                            <div className="p-4 text-center skill-block" style={{backgroundColor:'#BB86FC'}}>
+                                <h4>Height</h4>
+                                <h6>6"4'</h6>
+                            </div>
+                            <div className="p-3 text-center skill-block" style={{backgroundColor:'#CF6679'}}>
+                                <h4>Weight</h4>
+                                <h6>68 KG</h6>
+                            </div>
+                        </div>
+                        <div className="w-32 d-flex flex-row text-white">
+                            <div className="p-4 text-center skill-block" style={{backgroundColor:'#3c4424'}}>
+                                <h5>Address</h5>
+                                <h6>B-404,Soubhagya Residency,Near Lal-Baugh,Mumbai</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            {/* <div class="card mb-4 mb-lg-0">
-              <div class="card-body p-0">
-                <ul class="list-group list-group-flush rounded-3">
-                  <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                    <i class="fab fa-github fa-lg" style={{color:'#333333'}}></i>
-                    <p class="mb-0">mdbootstrap</p>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                    <i class="fab fa-twitter fa-lg" style={{color:'#55acee'}}></i>
-                    <p class="mb-0">@mdbootstrap</p>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                    <i class="fab fa-instagram fa-lg" style={{color:'#ac2bac'}}></i>
-                    <p class="mb-0">mdbootstrap</p>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                    <i class="fab fa-facebook-f fa-lg" style={{color:'#3b5998'}}></i>
-                    <p class="mb-0">mdbootstrap</p>
-                  </li>
-                </ul>
-              </div>
-            </div> */}
-          </div>
-          <div class="col-lg-8">
-            <div class="card mb-4">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-sm-3">
-                    <p class="mb-0">Full Name</p>
-                  </div>
-                  <div class="col-sm-9">
-                    <p class="text-muted mb-0">Johnatan Smith</p>
-                  </div>
-                </div>
-                <hr />
-                <div class="row">
-                  <div class="col-sm-3">
-                    <p class="mb-0">Email</p>
-                  </div>
-                  <div class="col-sm-9">
-                    <p class="text-muted mb-0">example@example.com</p>
-                  </div>
-                </div>
-                <hr/>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <p class="mb-0">Phone</p>
-                  </div>
-                  <div class="col-sm-9">
-                    <p class="text-muted mb-0">(097) 234-5678</p>
-                  </div>
-                </div>
-                <hr/>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <p class="mb-0">Mobile</p>
-                  </div>
-                  <div class="col-sm-9">
-                    <p class="text-muted mb-0">(098) 765-4321</p>
-                  </div>
-                </div>
-                <hr/>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <p class="mb-0">Address</p>
-                  </div>
-                  <div class="col-sm-9">
-                    <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
-                  </div>
-                </div>
-                <hr/>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <p class="mb-0">Address</p>
-                  </div>
-                  <div class="col-sm-9">
-                    <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
-                  </div>
-                </div>
-                <hr/>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <p class="mb-0">Address</p>
-                  </div>
-                  <div class="col-sm-9">
-                    <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* <div class="row">
-              <div class="col-md-6">
-                <div class="card mb-4 mb-md-0">
-                  <div class="card-body">
-                    <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status</p>
-                    <p class="mb-1" style={{fontSize:'.77rem'}}>Web Design</p>
-                    <div class="progress rounded" style={{height:'5px'}}>
-                      <div class="progress-bar" role="progressbar" style={{width:'80%'}} aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    
-                    <p class="mt-4 mb-1" style={{fontSize:'.77rem'}}>Backend API</p>
-                    <div class="progress rounded mb-2" style={{height:'5px'}}>
-                      <div class="progress-bar" role="progressbar" style={{width:'80%'}} aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="card mb-4 mb-md-0">
-                  <div class="card-body">
-                    <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status</p>
-                    <p class="mb-1" style={{fontSize:'.77rem'}}>Web Design</p>
-                    <div class="progress rounded" style={{height:'5px'}}>
-                      <div class="progress-bar" role="progressbar" style={{width:'80%'}} aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    
-                  </div>
-                </div>
-              </div>
-            </div> */}
-          </div>
         </div>
-      </div>
-    </section>
     </div>
     </>
   )

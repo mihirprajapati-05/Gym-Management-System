@@ -1,6 +1,6 @@
 import React from 'react'
 import img1 from '../components/images/chris-1.png'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import MemberDashboard from './MemberDashboard'
 
 function Membership() {
@@ -47,12 +47,10 @@ function Membership() {
                         </div>
                     </div>
 
-
-
                     {/* Buttons  */}
                     <div className="d-flex justify-content-end pt-3">
                         {/* <button type="button" className="btn btn-light btn-lg">Reset all</button> */}
-                        <button type="button" className="btn btn-warning btn-lg ms-2">PURCHASE</button>
+                        <button type="submit" className="btn btn-warning btn-lg ms-2">PURCHASE</button>
                     </div>
                 </div>
                 </div>

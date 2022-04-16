@@ -5,7 +5,7 @@ import 'mdbreact';
 
 function MemberDashboard() {
   return (
-    <div className='mb-5' style={{paddingBottom:'0px'}}>
+    <div className='' style={{paddingBottom:'0px'}}>
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-black">
         <div className="container-fluid">
           <Link className="navbar-brand ml-5" to="/"><img src={logo} width={100} height={40} alt='HomePage'></img></Link>

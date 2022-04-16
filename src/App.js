@@ -27,10 +27,16 @@ import AdminDashboard from './components/AdminDashboard';
 
 import TrainerDashboard from './components/TrainerDashboard';
 import TrainerProfile from './components/TrainerProfile';
+import TrainerSchedule from './components/TrainerSchedule';
+import Trainermember from './components/Trainermember';
+
 import AddEquipment from './components/AddEquipment';
 import OTP from './components/OTP';
 import NewPassword from './components/NewPassword';
 import UpdateMember from './components/UpdateMember';
+
+import VEquipment from './components/VEquipment';
+
 
 
 
@@ -43,11 +49,21 @@ function App() {
           {
             window.location.pathname === "/memberdashboard" ||
             window.location.pathname ===  "/memberdashboard/mprofile" ||
+            window.location.pathname ===  "/memberdashboard/mupdate" ||
+            window.location.pathname ===  "/memberdashboard/membership" ||
+            window.location.pathname ===  "/memberdashboard/mschedule" ||
+
+
             window.location.pathname === "/admindashboard" ||
             window.location.pathname === "/admindashboard/vmd" ||
             window.location.pathname === "/admindashboard/vtd" ||
+            window.location.pathname === "/admindashboard/ved" ||
+            window.location.pathname === "/admindashboard/adeq" ||
             window.location.pathname === "/admindashboard/regt" ||
+
             window.location.pathname === "/trainerdashboard" ||
+            window.location.pathname === "/trainerdashboard/tschedule" ||
+            window.location.pathname === "/trainerdashboard/tmember" ||
             window.location.pathname === "/trainerdashboard/tprofile" ? null :(
 
               <Navbar
@@ -85,11 +101,14 @@ function App() {
                 <Route path="/admindashboard/vtd" element={<VTrainerDetails />} />
                 <Route exact path="/admindashboard/regt" element={<RegistrationTrainer />} />
                 <Route path="/admindashboard/adeq" element={<AddEquipment />} />
+                <Route path="/admindashboard/ved" element={<VEquipment />} />
 
                 {/* Trainer Dashboard Routes.. */}
                 <Route path="/trainerdashboard" element={<TrainerDashboard />} />
                 <Route path="/trainerdashboard/membership" element={<Membership />} />
-
+                <Route path="/trainerdashboard/tmember" element={<Trainermember />} />
+                <Route path="/trainerdashboard/tschedule" element={<TrainerSchedule />} />
+                
                 <Route path="/trainerdashboard/tprofile" element={<TrainerProfile />} />
 
                 <Route path="/" element={<Home />} />

@@ -23,35 +23,35 @@ function MemberProfile() {
                             <h6>PERSONAL DETAILS</h6>
                         </div>
                         <div className="w-32 d-flex flex-row text-white">
-                            <div className="p-4 bg-primary text-center skill-block">
+                            <div className="p-4 text-center skill-block" style={{backgroundColor:'#2069e0'}}>
                                 <h5>Email</h5>
                                 <h6>Vidhyut123kjjkjk@gmail.com</h6>
                             </div>
-                            <div className="p-3 bg-success text-center skill-block">
+                            <div className="p-3 text-center skill-block" style={{backgroundColor:'#927c6c'}}>
                                 <h5>Contact No</h5>
                                 <h6>9852147852</h6>
                             </div>
                         </div>
                         <div className="d-flex flex-row text-white">
-                        <div className="p-3 bg-warning text-center skill-block">
+                        <div className="p-3 text-center skill-block" style={{backgroundColor:'#082086'}}>
                                 <h4>Gender</h4>
                                 <h6>Male</h6>
                             </div>
-                            <div className="p-3 bg-danger text-center skill-block">
+                            <div className="p-3 text-center skill-block" style={{backgroundColor:'#018786'}}>
                                 <h4>DOB</h4>
                                 <h6>01/05/2000</h6>
                             </div>
-                            <div className="p-4 bg-primary text-center skill-block">
+                            <div className="p-4 text-center skill-block" style={{backgroundColor:'#BB86FC'}}>
                                 <h4>Height</h4>
                                 <h6>6"4'</h6>
                             </div>
-                            <div className="p-3 bg-success text-center skill-block">
+                            <div className="p-3 text-center skill-block" style={{backgroundColor:'#CF6679'}}>
                                 <h4>Weight</h4>
                                 <h6>68 KG</h6>
                             </div>
                         </div>
                         <div className="w-32 d-flex flex-row text-white">
-                            <div className="p-4 bg-primary text-center skill-block">
+                            <div className="p-4 text-center skill-block" style={{backgroundColor:'#3c4424'}}>
                                 <h5>Address</h5>
                                 <h6>B-404,Soubhagya Residency,Near Lal-Baugh,Mumbai</h6>
                             </div>
