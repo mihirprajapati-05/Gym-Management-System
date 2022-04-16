@@ -95,32 +95,34 @@ function RegistrationUser() {
                         {/* name  */}
                         <div className="form-outline mb-4">
                             <input type="text" name="membername" value={formValues.membername} onChange={handleChange}  placeholder="Enter Name.." id="form3Example97" className="form-control form-control-lg" />
-                            <label className="form-label">Name</label><label className="form-label ml-5">{formErrors.membername}</label>
+                            {/* <label className="form-label">Name</label> */}
+                            <label className="form-label ml-5" style={{color:'red'}}>{formErrors.membername}</label>
                         </div>
                         {/* Email  */}                        
                         <div className="form-outline mb-4">
                             <input type="text" name="memberemail" value={formValues.memberemail} onChange={handleChange} placeholder="Enter Email-ID.." id="form3Example97" className="form-control form-control-lg" />
-                            <label className="form-label">Email ID</label><label className="form-label ml-5">{formErrors.memberemail}</label>                            
+                            {/* <label className="form-label">Email ID</label> */}
+                            <label className="form-label ml-5" style={{color:'red'}}>{formErrors.memberemail}</label>                            
                         </div>
                         {/* DOB and Contactno  */}
                         <div className="row">
                             <div className="col-md-6 mb-4">
                                 <div className="form-outline">
                                     <input type="date" name="memberdob" value={formValues.memberdob} onChange={handleChange} id="form3Example1m1" className="form-control form-control-lg" />
-                                    <label className="form-label" for="form3Example1m1">DOB</label><label className="form-label">{formErrors.memberdob}</label>
+                                    <label className="form-label" for="form3Example1m1">DOB</label><label className="form-label" style={{color:'red'}}>{formErrors.memberdob}</label>
                                 </div>
                             </div>
                             <div className="col-md-6 mb-4">
                                 <div className="form-outline">
                                     <input type="tel" name="membercontactno" value={formValues.membercontactno} onChange={handleChange} placeholder="Enter Contact Number.." id="form3Example1n1" className="form-control form-control-lg" />
-                                    <label className="form-label" for="form3Example1n1" >Contact Number</label><label className="form-label">{formErrors.membercontactno}</label>
+                                    <label className="form-label" for="form3Example1n1" >Contact Number</label><label className="form-label" style={{color:'red'}}>{formErrors.membercontactno}</label>
                                 </div>
                             </div>
                         </div>
                         {/* Address */}
                         <div className="form-outline mb-4">
                             <input type="text" name="memberaddress" value={formValues.memberaddress} onChange={handleChange} placeholder="Enter Address.." className="form-control form-control-lg" />
-                            <label className="form-label" for="form3Example8">Address</label><label className="form-label ml-5">{formErrors.memberaddress}</label>
+                            <label className="form-label" for="form3Example8">Address</label><label className="form-label ml-5" style={{color:'red'}}>{formErrors.memberaddress}</label>
                         </div>
                         {/* Gender  */}
                         <div className="d-md-flex justify-content-start align-items-center mb-4 py-2">
@@ -147,7 +149,7 @@ function RegistrationUser() {
                                 />
                                 <label className="form-check-label" for="maleGender">Male</label>
                             </div>
-                            <label className="form-label ml-5">{formErrors.membergender}</label>
+                            <label className="form-label ml-5" style={{color:'red'}}>{formErrors.membergender}</label>
                         </div>
 
                         {/* Height and Weight  */}
@@ -155,27 +157,35 @@ function RegistrationUser() {
                             <div className="col-md-6 mb-4">
                                 {/* <h3>{hselects}</h3> */}
                                 {/* 1 foot = 12 inches */}
-                                <select className="select" value={hselects} onChange={e=>sethselects(e.target.value)}>
+                                {/* <select className="select" value={hselects} onChange={e=>sethselects(e.target.value)}>
                                     <option>--Select Height--</option>
                                     <option value="1">1 Inches</option>
                                     <option value="2">2 Inches</option>
                                     <option value="3">3 Inches</option>
-                                </select>
+                                </select> */}
+                                <div className="form-outline">
+                                    <input type="number" name="memberheioght"  placeholder="ex.5 Feet" id="form3Example1n1" className="form-control form-control-lg" />
+                                    <label className="form-label" for="form3Example1n1" >Height</label>
+                                </div>
                                 
                             </div>
                             <div className="col-md-6 mb-4">
-                                <select className="select">
+                                {/* <select className="select">
                                     <option>--Select Weight--</option>
                                     <option value="2">Option 1</option>
                                     <option value="3">Option 2</option>
                                     <option value="4">Option 3</option>
-                                </select>
+                                </select> */}
+                                <div className="form-outline">
+                                    <input type="number" name="memberweight"  placeholder="ex.80 Kg" id="form3Example1n1" className="form-control form-control-lg" />
+                                    <label className="form-label" for="form3Example1n1" >Weight</label>
+                                </div>
                             </div>
                         </div>
                         {/* Password  */}
                         <div className="form-outline mb-4">
                             <input type="password" name="memberpassword" value={formValues.memberpassword} onChange={handleChange} placeholder="Enter Password.." className="form-control form-control-lg" />
-                            <label className="form-label" for="form3Example99">Password</label><label className="form-label ml-5">{formErrors.memberpassword}</label>
+                            <label className="form-label" for="form3Example99">Password</label><label className="form-label ml-5" style={{color:'red'}}>{formErrors.memberpassword}</label>
                         </div>
 
                         {Object.keys(formErrors).length === 0 && isSubmit ? (<div className="ui message success">Register Successfully..</div> 
@@ -185,7 +195,6 @@ function RegistrationUser() {
 
                         {/* Buttons  */}
                         <div className="d-flex justify-content-end pt-3">
-                            <button type="reset" className="btn btn-light btn-lg">Reset all</button>
                             <button type="submit" className="btn btn-warning btn-lg ms-2">Register</button>
                         </div>
                         <div className="d-flex justify-content-end">
