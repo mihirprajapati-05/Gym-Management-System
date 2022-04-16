@@ -8,7 +8,7 @@ const ChangePassword = () => {
     <div class="page-content">
         <div class="form-v6-content">
             <div class="form-left">
-                <img src={img1} className='ml-3 mt-3' style={{height:'380px',width:'550px'}} alt="form"/>
+                <img src={img1} className='ml-3 mt-3' style={{height:'100%',width:'550px',objectFit:"cover"}} alt="form"/>
             </div>
             <form class="form-detail" action="#" method="post">
                 <h2 className=''>CHANGE PASSWORD</h2>

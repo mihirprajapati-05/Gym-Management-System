@@ -1,15 +1,15 @@
-import React,{useState,useEffect} from 'react';
-import './css/registrationuser.css';
-import img1 from '../components/images/gym_dark5.jfif';
-import { Link } from 'react-router-dom';
+import React,{useState,useEffect} from 'react'
+import './css/updatemember.css';
+import img1 from '../components/images/rock5.png';
+import MemberDashboard from './MemberDashboard';
 
-function RegistrationUser() {
+function UpdateMember() {
 
-    const initialvalue={membername:"",memberemail:"",memberdob:"",membercontactno:"",memberaddress:"",membergender:"",memberpassword:""};
+    const initialvalue={membername:"",memberdob:"",membercontactno:"",memberaddress:"",membergender:""};
     const [formValues,setFormValues]=useState(initialvalue);
     const [formErrors,setFormErrors]=useState({});
     const [isSubmit,setisSubmit]=useState(false);
-    const [hselects,sethselects]=useState();
+    // const [hselects,sethselects]=useState();
     
     const handleChange=(e)=>{
         const {name,value}=e.target;
@@ -31,7 +31,7 @@ function RegistrationUser() {
 
     const validate=(values) =>{
         const errors={}
-        const emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+        // const emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
         const contactregx= /^(\+\d{1,3}[- ]?)?\d{10}$/;
 
         // Name
@@ -39,11 +39,11 @@ function RegistrationUser() {
             errors.membername="Name is Required...!";
         }
         // Email
-        if(!values.memberemail){
-            errors.memberemail="Email Address is Required...!";
-        }else if(!emailregex.test(values.memberemail)){
-            errors.memberemail="This is not a valid Email formate...!";
-        }
+        // if(!values.memberemail){
+        //     errors.memberemail="Email Address is Required...!";
+        // }else if(!emailregex.test(values.memberemail)){
+        //     errors.memberemail="This is not a valid Email formate...!";
+        // }
         // Contact no
         if(!values.membercontactno){
             errors.membercontactno="Contact number is required..!";
@@ -62,21 +62,14 @@ function RegistrationUser() {
         if(!values.membergender){
             errors.membergender="Select Gender..!";
         }   
-        // Password
-        if(!values.memberpassword){
-            errors.memberpassword="Password is required...!";
-        }else if(values.memberpassword.length < 8){
-            errors.memberpassword="Minimum 8 characters password must be required..!";
-        }else if(values.memberpassword.length > 15){
-            errors.memberpassword="Password cannot exceed more than 15 characters..!";
-        }
-
         return errors;
     };
 
-    return (
-    <div className='mt-5'>
-        <section className="h-100 bg-black">
+
+  return (
+    <div>
+        <MemberDashboard/>
+              <section className="h-100 bg-black">
         <div className="container py-5 h-100">
             <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col">
@@ -91,7 +84,7 @@ function RegistrationUser() {
                         {/* Form Tag */}
                     <form onSubmit={handleSubmit}>
                     <div className="card-body p-md-5 text-black">
-                        <h3 className="mb-5 text-uppercase text-center">REGISTER HERE..</h3>
+                        <h3 className="mb-5 text-uppercase text-center">UPDATE HERE..</h3>
                         {/* name  */}
                         <div className="form-outline mb-4">
                             <input type="text" name="membername" value={formValues.membername} onChange={handleChange}  placeholder="Enter Name.." id="form3Example97" className="form-control form-control-lg" />
@@ -99,11 +92,10 @@ function RegistrationUser() {
                             <label className="form-label ml-5" style={{color:'red'}}>{formErrors.membername}</label>
                         </div>
                         {/* Email  */}                        
-                        <div className="form-outline mb-4">
+                        {/* <div className="form-outline mb-4">
                             <input type="text" name="memberemail" value={formValues.memberemail} onChange={handleChange} placeholder="Enter Email-ID.." id="form3Example97" className="form-control form-control-lg" />
-                            {/* <label className="form-label">Email ID</label> */}
                             <label className="form-label ml-5" style={{color:'red'}}>{formErrors.memberemail}</label>                            
-                        </div>
+                        </div> */}
                         {/* DOB and Contactno  */}
                         <div className="row">
                             <div className="col-md-6 mb-4">
@@ -182,11 +174,6 @@ function RegistrationUser() {
                                 </div>
                             </div>
                         </div>
-                        {/* Password  */}
-                        <div className="form-outline mb-4">
-                            <input type="password" name="memberpassword" value={formValues.memberpassword} onChange={handleChange} placeholder="Enter Password.." className="form-control form-control-lg" />
-                            {/* <label className="form-label" for="form3Example99">Password</label><label className="form-label ml-5" style={{color:'red'}}>{formErrors.memberpassword}</label> */}
-                        </div>
 
                         {Object.keys(formErrors).length === 0 && isSubmit ? (<div className="ui message success">Register Successfully..</div> 
                         ) : (
@@ -195,10 +182,7 @@ function RegistrationUser() {
 
                         {/* Buttons  */}
                         <div className="d-flex justify-content-end pt-3">
-                            <button type="submit" className="btn btn-warning btn-lg ms-2">Register</button>
-                        </div>
-                        <div className="d-flex justify-content-end">
-                            <Link className="" to="/Login">Already Have An Account? Login Here...</Link>
+                            <button type="submit" className="btn btn-warning btn-lg ms-2">UPDATE</button>
                         </div>
                     </div>
                     </form>
@@ -213,4 +197,4 @@ function RegistrationUser() {
   )
 }
 
-export default RegistrationUser;
+export default UpdateMember

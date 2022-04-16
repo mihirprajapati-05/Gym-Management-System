@@ -13,26 +13,26 @@ function Feature() {
         <img src={img1} className="pmd-card-media" alt='feature' style={{height:'100%',width:'100%',objectFit:"cover"}}/>
         
         <div className="card-img-overlay bg-black">
-          <h2 className="card-title">FEATURE</h2>
+          <h2 className="card-title" style={{fontSize:'40px',marginTop:'50px',marginBottom:'100px'}}>FEATURE</h2>
           <div class="card-deck">
             <div class="card bg-dark">
               <img class="card-img-top" src={fimg1} alt="Card1"/>
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Weight Loss</h5>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               </div>
               <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
+                <small class="text-muted">M-Square Gym</small>
               </div>
             </div>
             <div class="card bg-dark">
               <img class="card-img-top" src={fimg2} alt="Card2"/>
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Spinnig Studio</h5>
                 <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
               </div>
               <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
+                <small class="text-muted">M-Square Gym</small>
               </div>
             </div>
             <div class="card bg-dark">
@@ -42,7 +42,7 @@ function Feature() {
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
               </div>
               <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
+                <small class="text-muted">M-Square Gym</small>
               </div>
             </div>
           </div>   

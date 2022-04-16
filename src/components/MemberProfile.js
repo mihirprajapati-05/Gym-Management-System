@@ -1,10 +1,13 @@
 import React from 'react'
 import './css/memberprofile.css'
+import MemberDashboard from './MemberDashboard'
 import { Link } from 'react-router-dom'
 
 function MemberProfile() {
   return (
-    <div className='mt-5'>
+      <>
+      <MemberDashboard/>
+    <div className='mt-5' style={{paddingTop:'20px'}}>
         <div className="container mt-5 mb-5">   
             <div className="row no-gutters" style={{border:'10px solid grey'}}>
                 <div className="col-md-4 col-lg-4">
@@ -58,6 +61,7 @@ function MemberProfile() {
             </div>
         </div>
     </div>
+    </>
   )
 }
 

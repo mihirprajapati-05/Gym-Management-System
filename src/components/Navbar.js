@@ -15,24 +15,26 @@ export default function Navbar(props) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/home">{props.Home}</Link>
-              </li>            
+                <Link className="nav-link active" aria-current="page" to="/home">{props.home}</Link>
+              </li>         
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/Contactus">{props.ContactUs}</Link>
+                <Link className="nav-link active" aria-current="page" to="/registrationuser">{props.signup}</Link>
+              </li>   
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/login">{props.signin}</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/Aboutus">{props.AboutUs}</Link>
+                <Link className="nav-link active" aria-current="page" to="/contactus">{props.contactus}</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/Login">{props.Login}</Link>
+                <Link className="nav-link active" aria-current="page" to="/aboutus">{props.aboutus}</Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/RegistrationUser">{props.RegistrationUser}</Link>
-              </li>
-              <li className="nav-item">
+
+
+              {/* <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/RegistrationTrainer">{props.RegistrationTrainer}</Link>
               </li>
-              {/* Views */}
+
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/VMemberDetails">VMembers</Link>
               </li>
@@ -41,7 +43,7 @@ export default function Navbar(props) {
               </li>
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/MemberProfile">MemberProfile</Link>
-              </li>
+              </li> */}
 
             </ul>
 
@@ -61,12 +63,13 @@ Navbar.propTypes = {
   RegistrationTrainer:PropTypes.string.isRequired
 }
 
-Navbar.defaultProps = {
-    Home:'Home',
-    AboutUs:'About Us',
-    ContactUs:'Contact Us',
-    Login:'Login',
-    RegistrationUser:'Registration',
-    RegistrationTrainer:'RegistrationTrainer'
+// Navbar.defaultProps = { 
+    
+//     Home:'Home',
+//     AboutUs:'About Us',
+//     ContactUs:'Contact Us',
+//     Login:'Login',
+//     RegistrationUser:'Registration',
+//     RegistrationTrainer:'RegistrationTrainer'
 
-}
+// }

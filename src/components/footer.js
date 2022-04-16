@@ -16,9 +16,9 @@ const footer = () => {
           </div>
           </div>
 
-          <div className="col-xs-12 col-sm-6 col-md-3">
+          <div className="col-xs-12 col-sm-6 col-md-3" style={{textAlign:'left'}}>
             <div className="widget no-box text-uppercase">
-              <h5 className="widget-title text-uppercase">Quick Links<span></span></h5>
+              <h5 className="widget-title text-uppercase ">Quick Links<span></span></h5>
               <ul className="thumbnail-widget">
                 <li>
                   <div className="thumb-content"><Link to="/Home">Home</Link></div> 
@@ -33,7 +33,7 @@ const footer = () => {
             </div>
           </div>
 
-          <div className="col-xs-12 col-sm-6 col-md-3">
+          <div className="col-xs-12 col-sm-6 col-md-3" style={{textAlign:'left'}}>
             <div className="widget no-box text-uppercase">
               <h5 className="widget-title text-uppercase">Quick Links<span></span></h5>
                 <ul className="thumbnail-widget">
@@ -43,19 +43,16 @@ const footer = () => {
                 <li>
                 <div className="thumb-content"><Link to="/RegistrationUser">Register </Link></div> 
                 </li>
-                <li>
-                <div className="thumb-content"><Link to="/Contactus"></Link></div> 
-                </li>
                 </ul>          
             </div>
           </div>
 
-          <div className="col-xs-12 col-sm-6 col-md-3">
+          <div className="col-xs-12 col-sm-6 col-md-3" style={{textAlign:'left'}}>
 
           <div className="widget no-box text-uppercase">
           <h5 className="widget-title text-uppercase">Contact Us<span></span></h5>
 
-          <p><a href="mailto:info@domain.com" title="glorythemes">info@M-Square.com</a></p>
+          <p><a href="mailto:info@M-Square.com" title="glorythemes">info@M-Square.com</a></p>
           </div>
           </div>
     

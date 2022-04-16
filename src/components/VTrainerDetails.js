@@ -1,10 +1,13 @@
 import React from 'react'
+import AdminDashboard from './AdminDashboard'
 
 function VTrainerDetails() {
   return (
-    <div className='mt-5'>
+      <>
+          <AdminDashboard/>
+    <div className='mt-5 bg-black'style={{paddingTop:'40px',paddingBottom:'100px'}}>
     <div class="container">
-        <h2>VIEW TRAINER DETAILS</h2>
+    <h2 className='h2 h2-white' style={{color:'white',marginBottom:'50px'}}>VIEW TRAINER DETAILS</h2>
         <table class="table table-dark table-striped table-hover" style={{border:'10px solid grey',textAlign:'center'}}>
             <thead>
             <tr>
@@ -73,6 +76,7 @@ function VTrainerDetails() {
         </table>
         </div>    
 </div>
+</>
   )
 }
 

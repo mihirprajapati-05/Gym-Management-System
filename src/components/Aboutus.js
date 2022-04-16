@@ -5,8 +5,8 @@ import img1 from '../components/images/gym_dark8.jpg'
 
 const Aboutus = () => {
   return (
-    
-      <div className='bg-black'>
+ 
+      <div className='bg-black' style={{paddingTop:'5px',paddingBottom:'50px'}}>
           <h1 style={{ color:'#FFFFFF' , textAlign:'center' ,fontWeight:'bold' ,marginTop:'60px' }}>About US</h1>
           <hr style={{ color:'#FFFFFF' ,marginLeft:'150px ' ,marginRight:'150px'}}/>
           <Card style={{ width: '60rem' ,height: '36rem' ,alignItems:'center' ,marginLeft:'260px'}}>
