@@ -19,12 +19,18 @@ function VTrainerDetails() {
                 <th>HEIGHT</th>
                 <th>WEIGHT</th>
                 <th style={{width:'128px'}}>REGISTER DATE</th>
+                <th>Batch</th>
+                <th>Experience</th>
+                <th>Specialities</th>
                 <th>ADDRESS</th>
                 <th>ACTIONS</th>
             </tr>
             </thead>
             <tbody>
             <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -45,6 +51,9 @@ function VTrainerDetails() {
                 <td>5F 9inch</td>
                 <td>62</td>
                 <td>01/05/2020</td>
+                <td>Morning</td>
+                <td>8 Y</td>
+                <td>Former Trainer of Oldest Martial Art Kalaripayittu</td>
                 <td>Behind Gandhi Road,Bardoli</td>
                 <td><button type="submit" className="btn btn-outline-danger btn-sm ms-2">REMOVE</button></td>
             </tr>
@@ -57,10 +66,16 @@ function VTrainerDetails() {
                 <td>6Foot 2inch</td>
                 <td>68</td>
                 <td>05/05/2020</td>
+                <td>Morning</td>
+                <td>10 Y</td>
+                <td>Former Trainer of Oldest Martial Art Kalaripayittu</td>
                 <td>Mumbai</td>
                 <td><button type="submit" className="btn btn-outline-danger btn-sm ms-2">REMOVE</button></td>
             </tr>
             <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>

@@ -1,7 +1,17 @@
 import React from 'react'
 import AdminDashboard from './AdminDashboard'
+import { Link } from 'react-router-dom'
+// import {useHistory} from 'react-router-dom'
 
 function VEquipment() {
+
+  // const history = useHistory();
+  
+  // const routeChange = () =>{ 
+  //   let path = `/admindashboard/ved`; 
+  //   history.push(path);
+  // }
+
   return (
     <>
     <AdminDashboard/>
@@ -15,8 +25,10 @@ function VEquipment() {
                     <th>IMAGE</th>
                     <th>NAME</th>
                     <th>QUANTITY</th>
+                    <th>CATEGORY</th>
                     <th>DESCRIPTION</th>
                     <th>ACTION</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -26,22 +38,30 @@ function VEquipment() {
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                 <tr>
                   <td></td>
-                    <td>Mihir</td>
-                    <td>Mihir@gmail.com</td>
-                    <td>9875641230</td>
+                    <td>Dubmbell</td>
+                    <td>5</td>
+                    <td>Dumbell</td>
+                    <td>For Build Muscules</td>
+                    <td><Link to="/admindashboard/ueq"><button type="submit" className="btn btn-outline-primary btn-sm ms-2">UPDATE</button></Link></td>
                     <td><button type="submit" className="btn btn-outline-danger btn-sm ms-2">REMOVE</button></td>
                 </tr>
                 <tr>
                   <td></td>
-                    <td>Vidhyut Jamwal</td>
-                    <td>Vidhyut@gmail.com</td>
-                    <td>9852365256</td>
+                  <td>Dubmbell</td>
+                    <td>5</td>
+                    <td>Dumbell</td>
+                    <td>For Build Muscules</td>
+                    <td><Link to="/admindashboard/ueq"><button type="submit" className="btn btn-outline-primary btn-sm ms-2">UPDATE</button></Link></td>
                     <td><button type="submit" className="btn btn-outline-danger btn-sm ms-2">REMOVE</button></td>
                 </tr>
                 <tr>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>

@@ -37,7 +37,7 @@ function MemberDashboard() {
                 <Link className="nav-link active" aria-current="page" to="/memberdashboard/mschedule">Schedule</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="">Logout</Link>
+                <Link className="nav-link active" aria-current="page" to="/login">Logout</Link>
               </li>
             </ul>
 

@@ -1,45 +1,40 @@
 import React,{useState,useEffect} from 'react'
 import './css/login.css'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import img1 from '../components/images/login.jpg'
-import axios from 'axios'
+ 
 function Login() {
 
-    const initialvalue={useremail:"",userpassword:""};
-    const [formValues,setFormValues]=useState(initialvalue);
+    const [formValues,setFormValues]=useState({useremail:"",userpassword:""});
     const [formErrors,setFormErrors]=useState({});
     const [isSubmit,setisSubmit]=useState(false);
-    const  result= axios.post('http://localhost:5000/auth/member_login',{ initialvalue });
-    const tresult = axios.post('http://localhost:5000/auth/register',{ initialvalue});
+
+    const {useremail,userpassword}=formValues;
 
     // const [hselects,sethselects]=useState();
-    
     const handleChange=(e)=>{
         const {name,value}=e.target;
         setFormValues({...formValues,[name]:value});
     };
-    const navigate = useNavigate()
+
+    // Here Submit Click Event
     const handleSubmit = (e)=>{
         e.preventDefault();
         setFormErrors(validate(formValues));
         setisSubmit(true);
-        
-        if(initialvalue.useremail === "admin@gmail.com" && initialvalue.userpassword ==="admin123")
-        {
-            navigate('/admindashboard')
-        }
-        else if(result) 
-        {
-         // result= axios.post('http://localhost:5000/auth/member_login',{ initialvalue });
 
-        navigate('/memberdashboard')
+        const newuser={
+            useremail,
+            userpassword
         }
-        else
-        {
-           
-            console.log(tresult)
-        navigate('/trainerdashboard')
-        }
+        // console.log(useremail,userpassword);
+
+
+
+// You Can write API code Hare......
+
+
+
 
     };
 
@@ -64,7 +59,7 @@ function Login() {
         if(!values.userpassword){
             errors.userpassword="Password is required...!";
         }else if(values.userpassword.length < 5){
-            errors.userpassword="Minimum 8 characters password must be required..!";
+            errors.userpassword="Minimum 5 characters password must be required..!";
         }else if(values.userpassword.length > 15){
             errors.userpassword="Password cannot exceed more than 15 characters..!";
         }
@@ -79,6 +74,7 @@ function Login() {
            <div class="form-left">
                <img src={img1} className='' style={{height:'100%',width:'550px',objectFit:"cover"}} alt="form"/>
            </div>
+           {/* Form tag */}
            <form class="form-detail" onSubmit={handleSubmit} action="#" method="post">
                <h2>LOGIN</h2>
                <div class="form-row">

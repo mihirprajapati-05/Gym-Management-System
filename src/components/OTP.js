@@ -19,6 +19,10 @@ function OTP() {
         e.preventDefault();
         setFormErrors(validate(formValues));
         setisSubmit(true);
+
+                //You can write API code Here.....
+
+
     };
 
     useEffect(()=>{

@@ -14,6 +14,9 @@ function TrainerDashboard() {
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/trainerdashboard">Home</Link>
+                </li>
                 <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/trainerdashboard/tprofile">Profile</Link>
                 </li>            
@@ -27,8 +30,9 @@ function TrainerDashboard() {
                 <Link className="nav-link active" aria-current="page" to="/trainerdashboard/membership">Membership</Link>
                 </li> */}
                 <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="">Logout</Link>
+                <Link className="nav-link active" aria-current="page" to="/login">Logout</Link>
               </li>
+
             </ul>
 
             </div>

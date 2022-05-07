@@ -7,7 +7,7 @@ function TrainerProfile() {
   return (
     <>
     <TrainerDashboard/>
-    <div className='mt-5'>
+    <div className='mt-5 bg-black' style={{paddingTop:'20px',paddingBottom:'80px'}}>
         <div className="container mt-5 mb-5">   
             <h2 className='h2 h2-center' style={{color:'white',fontSize:'60px'}}>PROFILE</h2>
             <div className="row no-gutters" style={{border:'10px solid grey'}}>
@@ -49,6 +49,16 @@ function TrainerProfile() {
                             <div className="p-3 text-center skill-block" style={{backgroundColor:'#CF6679'}}>
                                 <h4>Weight</h4>
                                 <h6>68 KG</h6>
+                            </div>
+                        </div>
+                        <div className="w-32 d-flex flex-row text-white">
+                            <div className="p-4 text-center skill-block" style={{backgroundColor:'#264348'}}>
+                                <h5>EXPERIENCE</h5>
+                                <h6>8 Years</h6>
+                            </div>
+                            <div className="p-3 text-center skill-block" style={{backgroundColor:'#454d32'}}>
+                                <h5>SPECIALITIES</h5>
+                                <h6>Trainer of Oldest Martial Art Kalaripayittu</h6>
                             </div>
                         </div>
                         <div className="w-32 d-flex flex-row text-white">

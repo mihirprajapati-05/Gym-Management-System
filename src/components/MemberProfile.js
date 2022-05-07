@@ -7,7 +7,7 @@ function MemberProfile() {
   return (
       <>
       <MemberDashboard/>
-    <div className='mt-5' style={{paddingTop:'20px'}}>
+    <div className='mt-5 bg-black' style={{paddingTop:'20px',paddingBottom:'80px'}}>
         <div className="container mt-5 mb-5">   
             <div className="row no-gutters" style={{border:'10px solid grey'}}>
                 <div className="col-md-4 col-lg-4">

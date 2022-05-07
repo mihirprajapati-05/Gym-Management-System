@@ -6,7 +6,7 @@ function TrainerSchedule() {
   return (
     <>
         <TrainerDashboard/>
-        <div className='bg-black'>
+        <div className='bg-black' style={{paddingTop:'20px',paddingBottom:'80px'}}>
             <div className='container'>
                 <h2 style={{color:'white',fontSize:'80x'}}>SCHEDULE</h2>
             </div>
